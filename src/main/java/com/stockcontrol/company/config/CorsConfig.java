@@ -13,12 +13,15 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("api/*")
+
+                registry.addMapping("/api/**")
                         .allowedOrigins(
                                 "http://localhost:5173",
                                 "https://inventory-system-murex-theta.vercel.app"
                         )
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedMethods(
+                                "GET","POST","PUT","DELETE","PATCH","OPTIONS"
+                        )
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }
