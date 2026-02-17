@@ -18,7 +18,7 @@ public class CorsConfig {
                                 "http://localhost:5173",
                                 "https://inventory-system-murex-theta.vercel.app"
                         )
-                        .allowedMethods("*")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }
