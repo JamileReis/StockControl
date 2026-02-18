@@ -16,7 +16,6 @@ public class CorsConfig {
 
                 registry.addMapping("/api/**")
                         .allowedOrigins(
-                                "http://localhost:5173",
                                 "https://inventory-system-murex-theta.vercel.app"
                         )
                         .allowedMethods(
